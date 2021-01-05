@@ -32,7 +32,7 @@ $cnt=1;
  ?>
 <table border="1"  cellpadding="10" style="border-collapse: collapse; border-spacing:0; width: 100%; text-align: center;">
   <tr align="center">
-   <th colspan="4" >Food Tracking History of #<?php echo  $orderid;?></th> 
+   <th colspan="4" >Catch Food Online Invoice #<?php echo  $orderid;?></th> 
   </tr>
   <tr>
     <th>#</th>

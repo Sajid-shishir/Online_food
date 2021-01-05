@@ -32,7 +32,7 @@ if(isset($_POST['login']))
    <meta name="description" content="">
    <meta name="author" content="">
    <link rel="icon" href="#">
-   <title>Food Ordering System</title>
+   <title>Catch Food Online</title>
    <link href="css/animsition.min.css" rel="stylesheet">
    <link href="css/animate.css" rel="stylesheet">
    <!-- Custom styles for this template -->

@@ -29,7 +29,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <link href="css/theme.css" rel="stylesheet">
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Lucida Sans Unicode;
         }
         #page-wrapper{
             background-image:url(img/food.jpg);
@@ -75,11 +75,11 @@ if (strlen($_SESSION['fosaid']==0)) {
                                         </tr>
                                     </thead>
                                     <?php
-$ret=mysqli_query($con,"select * from tbluser");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
+                                    $ret=mysqli_query($con,"select * from tbluser");
+                                    $cnt=1;
+                                    while ($row=mysqli_fetch_array($ret)) {
 
-?>
+                                    ?>
                                     <tbody>
                                         <tr>
                                             <td><?php echo $cnt;?></td>
@@ -94,8 +94,8 @@ while ($row=mysqli_fetch_array($ret)) {
                                                     Detail</a></td>
                                         </tr>
                                         <?php 
-$cnt=$cnt+1;
-}?>
+                                            $cnt=$cnt+1;
+                                            }?>
 
 
                                     </tbody>

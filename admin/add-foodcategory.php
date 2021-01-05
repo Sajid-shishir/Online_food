@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
     <link href="css/theme.css" rel="stylesheet">
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Lucida Sans Unicode;
         }
         #page-wrapper{
             background-image:url(img/food.jpg);
@@ -85,7 +85,7 @@ if(isset($_POST['submit']))
                             <a href="dashboard.php">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a>Category</a>
+                            <a href="manage-foodcategory.php">Category</a>
                         </li>
                         <li class="breadcrumb-item active">
                             <strong>Add</strong>
@@ -101,8 +101,8 @@ if(isset($_POST['submit']))
 
                             <div class="ibox-content">
                                 <p style="font-size:16px; color:red;"> <?php if($toast){
-    echo $toast;
-  }  ?> </p>
+                                                                    echo $toast;
+                                                                }  ?> </p>
 
                                 <form id="form" action="#" class="wizard-big" method="post" name="submit">
                                     <fieldset>

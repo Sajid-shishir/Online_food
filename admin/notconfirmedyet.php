@@ -26,6 +26,11 @@ if (strlen($_SESSION['fosaid']==0)) {
 
     <!-- custom css -->
     <link href="css/theme.css" rel="stylesheet">
+    <style>
+        body{
+            font-family:Lucida Sans Unicode;
+        }
+    </style>
 
 </head>
 
@@ -50,8 +55,8 @@ if (strlen($_SESSION['fosaid']==0)) {
 
                             <div class="ibox-content">
                                 <table class="table table-bordered mg-b-0">
-                                    <p style="text-align: center; color: blue; font-size: 25px">Detail of Order Not
-                                        Confirmed</p>
+                                    <p style="text-align: center; color: blue; font-size: 25px">
+                                        Not Confirmed Order's</p>
                                     <thead>
                                         <tr>
                                             <th>S.NO</th>

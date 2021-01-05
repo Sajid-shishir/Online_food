@@ -60,28 +60,19 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
                                 <div class="sidebar-title">
                                     <h6>Food Categories</h6> <i class="fa fa-cutlery pull-right"></i> </div>
                                     <ul id="food-menu">
-                                    <?php
-      
-      $query=mysqli_query($con,"select * from  tblcategory");
-              while($row=mysqli_fetch_array($query))
-              {
-              ?>    
-              
-                               
-                                            
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <span class="custom-control-description"><a href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span> </label>
-                                            </li>
-                                    
-                                        
-                                        
-                                        <?php } ?>
-                                        </ul>
-                                
-                            </div>
-                            <!-- end:Sidebar nav -->
-                            
+                                    <?php     
+                                    $query=mysqli_query($con,"select * from  tblcategory");
+                                    while($row=mysqli_fetch_array($query))
+                                    {
+                                    ?>                                               
+                                     <li>
+                                         <label class="custom-control custom-checkbox">
+                                            <span class="custom-control-description"><a href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span> </label>
+                                     </li>
+                                <?php } 
+                                ?>
+                                    </ul>
+                               </div>                         
                         </div>
                         <!-- end:Left Sidebar -->
                         
@@ -90,7 +81,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
                         <div class="menu-widget m-b-30">
                             <div class="widget-heading">
                                 <h3 class="widget-title text-dark">
-                              Your ORDERS Delicious hot food! <a class="btn btn-link pull-right">
+                              Your ORDERS <a class="btn btn-link pull-right">
                              
                               <i class="fa fa-angle-down pull-right"></i>
                               </a>
@@ -99,14 +90,12 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
                             </div>
                             <div class="order-collapse" id="1">
                                
-
-<?php 
-$oid=$_GET['orderid'];
-$query=mysqli_query($con,"select tblfood.Image,tblfood.ItemName,tblfood.ItemDes,tblfood.ItemPrice,tblfood.ItemQty,tblorders.FoodId from tblorders join tblfood on tblfood.ID=tblorders.FoodId where  tblorders.IsOrderPlaced=1 and tblorders.OrderNumber='$oid'");
-$num=mysqli_num_rows($query);
-while ($row=mysqli_fetch_array($query)) {
-?>
-
+                            <?php 
+                            $oid=$_GET['orderid'];
+                            $query=mysqli_query($con,"select tblfood.Image,tblfood.ItemName,tblfood.ItemDes,tblfood.ItemPrice,tblfood.ItemQty,tblorders.FoodId from                             tblorders join tblfood on tblfood.ID=tblorders.FoodId where  tblorders.IsOrderPlaced=1 and tblorders.OrderNumber='$oid'");
+                            $num=mysqli_num_rows($query);
+                            while ($row=mysqli_fetch_array($query)) {
+                            ?>
                                     <div class="order-items">
                                         <div class="order-content">
                                             <div class="rest-logo">
@@ -114,7 +103,7 @@ while ($row=mysqli_fetch_array($query)) {
                                             </div>
                                             <!-- end:Logo -->
                                             <div class="rest-descr">
-<h6><a href="food-detail.php?fid=<?php echo $_SESSION['fid']=$row['FoodId'];?>"><?php echo $row['ItemName']?> (<?php echo $row['ItemQty']?>) </a></h6>
+                                            <h6><a href="food-detail.php?fid=<?php echo $_SESSION['fid']=$row['FoodId'];?>"><?php echo $row['ItemName']?> (<?php echo $row['ItemQty']?>) </a></h6>
                                                 <p> <?php echo $row['ItemDes']?></p>
                                             </div>
                                             <!-- end:Description -->
@@ -125,9 +114,9 @@ while ($row=mysqli_fetch_array($query)) {
                                     <!-- end:row -->
 
                                 <?php 
-$grandtotal+=$total;
-                    }        
- ?>
+                             $grandtotal+=$total;
+                                 }        
+                                 ?>
                               
                           
                             </div>

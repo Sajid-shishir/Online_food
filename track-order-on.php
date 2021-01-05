@@ -60,15 +60,15 @@ if(isset($_POST['login']))
                      <div class="form-wrapper">
                         <div class="widget">
                            <div class="widget-body">
-                              <p style="font-size:16px; color:red" align="center"> <?php if($msg){
-    echo $msg;
-  }  ?> </p>
-                              <form action="track-order-search.php" name="trackorder" method="post">
+                              <p style="font-size:16px; color:white" align="center"> <?php if($msg){
+                                                                                    echo $msg;
+                                                                                  }  ?> </p>
+                              <form action="track-order-search.php" name="trackorder" method="post" class="form">
                                  <div class="">
                                     <div class="form-group">
                                        <label for="exampleInputEmail1">Order Number</label>
-<input type="text" name="ordernumber" id="ordernumber" class="form-control" placeholder="Your Order Number"
-                      required="true" >
+                                        <input type="text" name="ordernumber" id="ordernumber" class="form-control" placeholder="Your Order Number"
+                                        required="true" >
                                     </div> </div>
                                                     
                                  
@@ -88,13 +88,12 @@ if(isset($_POST['login']))
                     <div class="side-wrapper">
                         <h4 class="section-title">Track your order by using order number.</h4>
                         <hr>
-                        <img src="images/track-order.jpg" alt="" class="img-fluid">
+                        <img src="images/track-order2.png" alt="" class="img-fluid">
                         <p></p>
                    
                    
                         <!-- end:Panel -->
-                        <h4 class="m-t-20">Contact Customer Support</h4>
-                        <p> If you"re looking for more help or have a question to ask, please </p>
+                        <h4 class="m-t-20">For Customer Support</h4>
                         <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p>
                      </div>
                      <!-- /WHY? -->

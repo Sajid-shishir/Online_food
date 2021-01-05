@@ -52,7 +52,7 @@ if($query)
                 <div class="menu-wrapper">
                     <div class="side-menu">
                         <div class="menu-img">
-                            <img src="images/food.jpg" alt="food">
+                            <img src="images/cat.png" alt="food">
                         </div>
                         <div class="sidebar">
                             <form name="search" method="post" action="search-food.php">
@@ -65,8 +65,6 @@ if($query)
                                 </div>
                             </form>
 
-
-
                             <div class="main-block">
                                 <div class="sidebar-title">
                                     <h6>Food Categories</h6> <i class="fas fa-utensils"></i>
@@ -76,15 +74,13 @@ if($query)
                                 while($row=mysqli_fetch_array($query))
                                 {
                                 ?>
-                  <ul class="categories">
+                     <ul class="categories">
                       <li>
                           <label class="custom-control custom-checkbox">
                               <span class="custom-control-description"><a href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span>
                           </label>
                       </li>
-
-
-                                </ul>
+                               </ul>
                                 <?php } ?>
 
                             </div>
@@ -142,27 +138,7 @@ if($query)
                             <!-- Each popular food item starts -->
                         </div>
                         <!-- end:right row -->
-                        <div class="pagination-section">
-                            <nav aria-label="...">
-
-
-                                <ul class="pagination">
-                                    <li class="page-link"><a href="?pageno=1">First</a></li>
-                                    <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?> page-link">
-                                        <a
-                                            href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
-                                    </li>
-                                    <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?> page-link">
-                                        <a
-                                            href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
-                                    </li>
-                                    <li class="page-link"><a href="?pageno=<?php echo $total_pages; ?>">Last</a>
-                                    </li>
-                                </ul>
-
-
-                            </nav>
-                        </div>
+                        
                     </div>
                 </div>
         </div>

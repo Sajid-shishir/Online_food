@@ -874,7 +874,7 @@ h5 {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
-  background-color: #293846;
+  background-color: black;//////////////////////////////////////////////////////////////////////////////////
   color: white;
 }
 .nav .open > a,
@@ -998,8 +998,9 @@ h5 {
 }
 .nav-header {
   padding: 33px 25px;
-  background-color: #2f4050;
-  background-image: url("patterns/header-profile.png");
+  color: #e76060;
+  background-color: #e76060;
+  background-image: url("patterns/9.png");
 }
 .caret {
   display: inline-block;
@@ -1018,10 +1019,10 @@ h5 {
   transition: all 0.4s;
 }
 ul.nav-second-level {
-  background: #293846;
+  background: black;//////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 .nav > li.active {
-  border-left: 4px solid #19aa8d;
+  border-left: 4px solid #4c5553;
   background: #293846;
 }
 .nav.nav-second-level > li.active {
@@ -1385,7 +1386,7 @@ body.canvas-menu.mini-navbar .navbar-default .nav li .profile-element a span {
 }
 body.canvas-menu nav.navbar-static-side {
   z-index: 2001;
-  background: #2f4050;
+  background: #e76060;
   height: 100%;
   position: fixed;
   display: none;
@@ -1411,7 +1412,7 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 .top-navigation .nav > li > a {
   padding: 15px 20px;
-  color: #676a6c;
+  color: #e76060;
 }
 .top-navigation .nav > li a:hover,
 .top-navigation .nav > li a:focus {

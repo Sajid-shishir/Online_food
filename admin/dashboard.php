@@ -5,7 +5,7 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['fosaid']==0)) {
   header('location:logout.php');
   } 
-     ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Catch Food Online</title>
+    <title>Catch Food Online!</title>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -24,7 +24,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <link rel="stylesheet" href="css/theme.css">
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Lucida Sans Unicode;
         }
         #page-wrapper{
             background-image:url(img/food.jpg);
@@ -32,6 +32,8 @@ if (strlen($_SESSION['fosaid']==0)) {
             background-size:cover;
             background-position:center;
             position:relative;
+            color: red;
+
         }
         
         #page-wrapper:before{
@@ -41,8 +43,8 @@ if (strlen($_SESSION['fosaid']==0)) {
             left:0;
             width:100%;
             height:100%;
-            background:black;
             opacity:0.5;
+
         }
     </style>
 
@@ -56,20 +58,17 @@ if (strlen($_SESSION['fosaid']==0)) {
             <?php include_once('includes/header.php');?>
             <div class="wrapper wrapper-content">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="ibox">
-                            <div class="ibox-title">
+                    <div  class="col-lg-4">
+                        <div  class="ibox" >
+                            <div class="ibox-title" style="background-color: black" >
                                 <?php $query=mysqli_query($con,"Select * from tblorderaddresses");
                                 $totalorder=mysqli_num_rows($query);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="all-order.php"
-                                    style="font-size: 20px"><strong>All Order's</strong></a>
-                                <h5></h5>
+                                    style="font-size: 25px;"><strong>All Order's</strong></a>
                             </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins"><?php echo $totalorder;?></h1>
-
-                                <small>All order's</small>
+                            <div class="ibox-content" style="background-color: black" >
+                                <h1 class="no-margins"style="color: white"><?php echo $totalorder;?></h1>
                             </div>
                         </div>
                     </div>
@@ -80,13 +79,11 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $notconfirmedorder=mysqli_num_rows($query1);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="notconfirmedyet.php"
-                                    style="font-size: 20px"><strong>Not Confirmed Order's</strong></a>
-
-
+                                    style="font-size: 15px"><strong>Not Confirmed Order's</strong></a>
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $notconfirmedorder;?></h1>
-                                <small>Not Confirmed Order's</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -97,13 +94,13 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $conforder=mysqli_num_rows($query2);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="confirmed-order.php"
-                                    style="font-size: 20px"><strong>Confirmed Order's</strong></a>
+                                    style="font-size: 15px"><strong>Confirmed Order's</strong></a>
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $conforder;?></h1>
 
-                                <small>Confirmed Order's</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -118,13 +115,13 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $beigpre=mysqli_num_rows($query3);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="foodbeingprepared.php"
-                                    style="font-size: 20px"><strong>Food being Prepared</strong></a>
+                                    style="font-size: 15px"><strong>Food being Prepared</strong></a>
 
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $beigpre;?></h1>
-                                <small>Food is being Prepared</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -136,13 +133,13 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $foodpickup=mysqli_num_rows($query4);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="food-pickup.php"
-                                    style="font-size: 20px"><strong> Food Pickup</strong></a>
+                                    style="font-size: 15px"><strong> Food Pickup</strong></a>
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $foodpickup;?></h1>
 
-                                <small> Food Pickup</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -153,12 +150,12 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $fooddel=mysqli_num_rows($query5);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="food-delivered.php"
-                                    style="font-size: 20px"><strong>Total Food Delivered</strong></a>
+                                    style="font-size: 15px"><strong>Total Food Delivered</strong></a>
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $fooddel;?></h1>
-                                <small>Total Food Delivered</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -171,13 +168,13 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $notconfirmedorder=mysqli_num_rows($query1);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="canclled-order.php"
-                                    style="font-size: 20px"><strong>Cancelled Order's</strong></a>
+                                    style="font-size: 15px"><strong>Cancelled Order's</strong></a>
 
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $notconfirmedorder;?></h1>
-                                <small>Cancelled Order's</small>
+                                
                             </div>
                         </div>
                     </div>
@@ -190,13 +187,13 @@ if (strlen($_SESSION['fosaid']==0)) {
                                 $usercount=mysqli_num_rows($query);
                                 ?>
                                 <a class="text-muted text-uppercase m-b-20" href="user-detail.php"
-                                    style="font-size: 20px"><strong>Total Registered User's</strong></a>
+                                    style="font-size: 15px"><strong>Total Registered User's</strong></a>
 
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins"><?php echo $usercount;?></h1>
 
-                                <small>Total Registered User's</small>
+                                
                             </div>
                         </div>
                     </div>

@@ -71,7 +71,7 @@ if($query)
                 <?php
                 $sdata=$_POST['searchdata'];
                 ?>
-                <p style="text-align: center;"><span class="primary-color"><strong>Result against '<?php echo $sdata;?>' keyword</strong></span></div>
+                <p  style="text-align: center; color:black"><span class="secondary-color"><strong>Result against '<?php echo $sdata;?>' keyword</strong></span></div>
             </p>
            
         </div>
@@ -118,14 +118,10 @@ if($query)
                                 </div>
 
                             </div>
-                    
-                            <!-- end:Pricing widget -->
-                     
-                            <!-- end:Widget -->
                         </div>
                      <div class="items">
                             <div class="items-wrapper">
-                                <!-- Each popular food item starts -->
+                                
                                     <?php
                                     $searchdata=$_POST['searchdata'];
                                     $sql = "SELECT * FROM tblfood where ItemName like '%$searchdata%' ";

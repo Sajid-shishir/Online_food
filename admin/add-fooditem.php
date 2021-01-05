@@ -49,7 +49,7 @@ else
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -60,7 +60,7 @@ else
     <link href="css/theme.css" rel="stylesheet">
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Lucida Sans Unicode;
         }
         #page-wrapper{
             background-image:url(img/food.jpg);

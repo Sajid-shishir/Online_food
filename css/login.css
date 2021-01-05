@@ -1,5 +1,7 @@
 .side-wrapper{
-    text-align: left!important;
+    text-align: center;!important;
+    font-size: 33px;
+    
 }
 
 label{
@@ -9,11 +11,13 @@ label{
 
 .side-wrapper h4{
     color:var(--font-dark)!important;
+    
 }
 
 .form-wrapper form a{
     color: var(--font-dark);
     font-size: 13px;
+    
 }
 
 .form-bind i{
@@ -22,7 +26,7 @@ label{
 }
 
 .side-wrapper p{
-    font-size: 13px;
+    font-size: 23px;
 }
 
 .side-wrapper p a{
@@ -30,5 +34,12 @@ label{
 }
 
 .login-form input{
-    color: var(--font-dark)!important;
+    color: white;
+}
+.page{
+
+    background-image: url('../images/food_banner2.jpg');
+}
+.form input{
+    color: white;
 }

@@ -28,7 +28,7 @@ if($query)
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
 
     <!-- animation css -->
     <link href="css/animsition.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@ if($query)
                 <div class="menu-wrapper">
                     <div class="side-menu">
                         <div class="menu-img">
-                            <img src="images/food.jpg" alt="food">
+                            <img src="images/cat.png" alt="food">
                         </div>
                         <div class="sidebar">
                             <form name="search" method="post" action="search-food.php">

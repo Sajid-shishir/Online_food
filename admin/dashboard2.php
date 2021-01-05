@@ -1,3 +1,11 @@
+<?php
+session_start();
+error_reporting(0);
+include('includes/dbconnection.php');
+if (strlen($_SESSION['fosaid']==0)) {
+  header('location:logout.php');
+  } 
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,186 +49,174 @@
             <div class="topbar-main">
                 <div class="container">
 
-                    <!-- LOGO -->
-                    <div class="topbar-left">
-                        <a href="index.html" class="logo"><span>Catch Food Online</span></a>
+        <!-- header -->
+        <?php include_once('includes/head.php');?>
+        <!-- End header-->
+
+        <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <?php $query=mysqli_query($con,"Select * from tblorderaddresses");
+                                $totalorder=mysqli_num_rows($query);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="all-order.php"
+                                    style="font-size: 20px"><strong>All Order's</strong></a>
+                                <h5></h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $totalorder;?></h1>
+
+                                <small>All order's</small>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End Logo container-->
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query1=mysqli_query($con,"Select * from  tblorderaddresses where OrderFinalStatus is null");
+                                $notconfirmedorder=mysqli_num_rows($query1);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="notconfirmedyet.php"
+                                    style="font-size: 20px"><strong>Not Confirmed Order's</strong></a>
 
 
-                    <div class="menu-extras">
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $notconfirmedorder;?></h1>
+                                <small>Not Confirmed Order's</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query2=mysqli_query($con,"Select * from  tblorderaddresses where OrderFinalStatus ='Order Confirmed'");
+                                $conforder=mysqli_num_rows($query2);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="confirmed-order.php"
+                                    style="font-size: 20px"><strong>Confirmed Order's</strong></a>
 
-                        <ul class="nav navbar-nav navbar-right pull-right">
-                            <li>
-                                <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                     <input type="text" placeholder="Search by order" class="form-control">
-                                     <a href="search.php"><i class="fa fa-search"></i></a>
-                                </form>
-                            </li>
-                            <li class="dropdown user-box">
-                                <a href="" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
-                                    <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
-                                    <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
-                                </a>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $conforder;?></h1>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-power-off m-r-5"></i> Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="menu-item">
-                            <!-- Mobile menu toggle-->
-                            <a class="navbar-toggle">
-                                <div class="lines">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </a>
-                            <!-- End mobile menu toggle-->
+                                <small>Confirmed Order's</small>
+                            </div>
                         </div>
                     </div>
 
                 </div>
-            </div>
+                <div class="row">
 
-            <div class="navbar-custom">
-                <div class="container">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
-                            <li>
-                                <a href="index.html"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#"><i class="fa fa-users"></i> <span> Registered Users </span> </a>
-                                <ul class="">
-                                    <!-- <li>
-                                        <ul>
-                                            <li><a href="ui-buttons.html">Buttons</a></li>
-                                            <li><a href="ui-cards.html">Cards</a></li>
-                                            <li><a href="ui-draggable-cards.html">Draggable Cards</a></li>
-                                            <li><a href="ui-typography.html">Typography </a></li>
-                                            <li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
-                                            <li><a href="ui-material-icons.html">Material Design Icons</a></li>
-                                            <li><a href="ui-font-awesome-icons.html">Font Awesome</a></li>
-                                            <li><a href="ui-themify-icons.html">Themify Icons</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li><a href="ui-dripicons.html">Dripicons</a></li>
-                                            <li><a href="ui-modals.html">Modals</a></li>
-                                            <li><a href="ui-notification.html">Notification</a></li>
-                                            <li><a href="ui-range-slider.html">Range Slider</a></li>
-                                            <li><a href="ui-components.html">Components</a>
-                                            <li><a href="ui-sweetalert.html">Sweet Alert</a>
-                                            <li><a href="ui-treeview.html">Tree view</a>
-                                            <li><a href="ui-widgets.html">Widgets</a></li>
-                                        </ul>
-                                    </li> -->
-                                </ul>
-                            </li>
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query3=mysqli_query($con,"Select * from  tblorderaddresses where OrderFinalStatus ='Food being Prepared'");
+                                $beigpre=mysqli_num_rows($query3);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="foodbeingprepared.php"
+                                    style="font-size: 20px"><strong>Food being Prepared</strong></a>
 
-                            <li class="has-submenu">
-                                <a href="#"><i class="zmdi zmdi-collection-text"></i><span> Food Category </span> </a>
-                                <ul class="submenu">
-                                    <li><a href="form-elements.html">Categories</a></li>
-                                    <li><a href="form-advanced.html">Manage Categories</a></li>                               
-                                </ul>
-                            </li>
 
-                            <li class="has-submenu">
-                                <a href="#"><i class="zmdi zmdi-view-list"></i> <span> Food Menu </span> </a>
-                                <ul class="submenu">
-                                    <li><a href="tables-basic.html">Add Food</a></li>
-                                    <li><a href="tables-datatable.html">Manage Food</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"><i class="zmdi zmdi-chart"></i><span> Orders </span> </a>
-                                <ul class="submenu">
-                                    <li><a href="chart-flot.html">Not Confirmed Yet</a></li>
-                                    <li><a href="chart-morris.html">Order Confirmed</a></li>
-                                    <li><a href="chart-chartist.html">Food Being Prepared</a></li>
-                                    <li><a href="chart-chartjs.html">Food Pickup</a></li>
-                                    <li><a href="chart-other.html">Food Delivered</a></li>
-                                    <li><a href="chart-other.html">Cancelled</a></li>
-                                    <li><a href="chart-other.html">All Orders</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"><i class="zmdi zmdi-collection-item"></i><span> Reports </span> </a>
-                                <ul class="submenu">
-                                    <li><a href="page-starter.html">Between Dates</a></li>
-                                    <li><a href="page-login.html">Order Count </a></li>
-                                    <li><a href="page-register.html">Sales Report</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <!-- End navigation menu  -->
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $beigpre;?></h1>
+                                <small>Food is being Prepared</small>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query4=mysqli_query($con,"Select * from tblorderaddresses where OrderFinalStatus ='Food Pickup'");
+                                $foodpickup=mysqli_num_rows($query4);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="food-pickup.php"
+                                    style="font-size: 20px"><strong> Food Pickup</strong></a>
+
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $foodpickup;?></h1>
+
+                                <small> Food Pickup</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query5=mysqli_query($con,"Select * from  tblorderaddresses where OrderFinalStatus ='Food Delivered'");
+                                $fooddel=mysqli_num_rows($query5);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="food-delivered.php"
+                                    style="font-size: 20px"><strong>Total Food Delivered</strong></a>
+
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $fooddel;?></h1>
+                                <small>Total Food Delivered</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query1=mysqli_query($con,"Select * from  tblorderaddresses where OrderFinalStatus='Order Cancelled'");
+                                $notconfirmedorder=mysqli_num_rows($query1);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="canclled-order.php"
+                                    style="font-size: 20px"><strong>Cancelled Order's</strong></a>
+
+
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $notconfirmedorder;?></h1>
+                                <small>Cancelled Order's</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <?php $query=mysqli_query($con,"Select * from tbluser");
+                                $usercount=mysqli_num_rows($query);
+                                ?>
+                                <a class="text-muted text-uppercase m-b-20" href="user-detail.php"
+                                    style="font-size: 20px"><strong>Total Registered User's</strong></a>
+
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins"><?php echo $usercount;?></h1>
+
+                                <small>Total Registered User's</small>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-        </header>
-        <!-- End Navigation Bar-->
 
 
         <div class="wrapper">
             <div class="container">
 
-                <!-- Page-Title -->
-                <!-- <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn-group pull-right m-t-15">
-                            <button type="button" class="btn btn-custom dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Dashboard</h4>
-                    </div>
-                </div> -->
+                
+               
 
-
-                 <!-- end col -->
-
-                </div>
+            </div>
                 <!-- end row -->
 
 
                 <!-- Footer -->
-                <footer class="footer text-right">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                Catch Food Online © Md.Sajidul Haque.
-                            </div>
-                            <div class="col-xs-6">
-                                <!-- <ul class="pull-right list-inline m-b-0">
-                                    <li>
-                                        <a href="#">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Help</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contact</a>
-                                    </li>
-                                </ul> -->
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+               <?php include_once('includes/foot.php');?>
                 <!-- End Footer -->
 
             </div>

@@ -17,7 +17,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -26,6 +26,11 @@ if (strlen($_SESSION['fosaid']==0)) {
 
     <!-- custom css -->
     <link href="css/theme.css" rel="stylesheet">
+    <style>
+        body{
+            font-family:Lucida Sans Unicode;
+        }
+    </style>
 </head>
 
 <body>
@@ -78,8 +83,8 @@ if (strlen($_SESSION['fosaid']==0)) {
                                             <input type="radio" name="requesttype" value="Order Confirmed">Confirmed
                                             Order
                                             <input type="radio" name="requesttype" value="Food being Prepared">Food
-                                            Being Prepared Order
-                                            <input type="radio" name="requesttype" value="Food Pickup">Food Pickup Order
+                                            Prepared Order
+                                            <!-- <input type="radio" name="requesttype" value="Food Pickup">Food Pickup Order -->
                                             <input type="radio" name="requesttype" value="Food Delivered">Food Delivered
                                             order
                                         </div>

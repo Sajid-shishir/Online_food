@@ -9,12 +9,12 @@
       <ul id="main-menu">
          <li> <a class="menu-link active" href="index.php">Home</a> </li>
 
-         <!-- <li> <a class="menu-link" href="food_results.php?pageno=1">Food Menu</a> </li> -->
+         <li> <a class="menu-link" href="food_results.php?pageno=1">Menu</a> </li>
 
 
          <?php if (strlen($_SESSION['fosuid']==0)) {?>
         <li> <a class="menu-link" href="registration.php">Sign up</a> </li>
-         <li> <a class="menu-link" href="login.php">Sign in</a>
+         <li> <a class="menu-link" href="login.php">Login</a>
          <li> <a class="menu-link" href="track-order-on.php">Track Order</a> </li>
          <?php } ?>
 

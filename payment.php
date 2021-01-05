@@ -163,7 +163,7 @@ if (strlen($_SESSION['fosuid']==0)) {
                             <ol style="border-bottom: 1px solid black; padding-bottom: 8px;">
                                 <li>Dial <b>*247#</b></li>
                                 <li>Select <b>Send Money</b></li>
-                                <li>Input Mobile No: <b>01757110296</b></li>
+                                <li>Input Mobile No: <b>01686662852</b></li>
                                 <li>Input Counter No: <b>1</b></li>
                                 <li>Input <b>PIN</b></li>
                                 <li><b>Confirm</b></li>

@@ -24,24 +24,15 @@
              <a href="index.php" class="logo"> Catch-Food Online </a><br />
           </div>
           <div class="footer-widgets">
-             <h5>About Us</h5>
+             <h5>About</h5>
              <ul>
                 <li><a href="about-us.php">About us</a> </li>
+             </ul>
+          </div>
+          <div class="footer-widgets">
+             <h5>Contact</h5>
+             <ul>
                 <li><a href="contact.php">Contact us</a> </li>
-             </ul>
-          </div>
-          <div class="footer-widgets">
-             <h5>My Account</h5>
-             <ul>
-                <li><a href="#">My Profile</a> </li>
-                <li><a href="#">My Cart</a> </li>
-                <li><a href="#">My Order</a> </li>
-             </ul>
-          </div>
-          <div class="footer-widgets">
-             <h5>Track Order </h5>
-             <ul>
-                <li><a href="track-order-on.php">Track Order </a> </li>
              </ul>
           </div>
 
@@ -49,7 +40,7 @@
           <div class="footer-widgets">
              <h5>Admin </h5>
              <ul>
-                <li><a href="admin" target="_blank">Login </a> </li>
+                <li><a href="admin" target="_blank">Admin </a> </li>
              </ul>
           </div>
        </div>

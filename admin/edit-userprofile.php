@@ -10,10 +10,12 @@ if(isset($_POST['submit']))
     $sid=$_GET['userid'];
     $fname=$_POST['firstname'];
     $lname=$_POST['lastname'];
+    $contno=$_POST['mobilenumber'];
+    $email=$_POST['email'];
     
    
 
-    $query=mysqli_query($con, "update tbluser set FirstName='$fname', LastName='$lname' where ID='$sid'");
+    $query=mysqli_query($con, "update tbluser set FirstName='$fname', LastName='$lname', Email='$email', MobileNumber='$contno' where ID='$sid'");
 
 
     if ($query) {
@@ -34,7 +36,7 @@ if(isset($_POST['submit']))
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -43,6 +45,12 @@ if(isset($_POST['submit']))
 
     <!-- custom css -->
     <link href="css/theme.css" rel="stylesheet">
+    <style>
+
+        body{
+            font-family:Lucida Sans Unicode;
+        }
+    </style>
 </head>
 
 <body>
@@ -92,25 +100,28 @@ while ($row=mysqli_fetch_array($ret)) {
 
                                 <form id="submit" action="#" class="wizard-big" method="post" name="submit">
                                     <fieldset>
-                                        <div class="form-group row"><label class="col-sm-2 col-form-label">First
-                                                Name:</label>
-                                            <div class="col-sm-10"><input name='firstname' id="firstname"
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">FirstName:
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input name='firstname' id="firstname"
                                                     class="form-control white_bg"
                                                     value="<?php  echo $row['FirstName'];?>">
-
-
                                             </div>
                                         </div>
-                                        <div class="form-group row"><label class="col-sm-2 col-form-label">Last
-                                                Name:</label>
-                                            <div class="col-sm-10"><input type="text" class="form-control"
-                                                    name="lastname" value="<?php  echo $row['LastName'];?>"></div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">LastName:
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control"
+                                                    name="lastname" value="<?php  echo $row['LastName'];?>">
+                                                </div>
                                         </div>
 
                                         <div class="form-group row"><label
                                                 class="col-sm-2 col-form-label">Email:</label>
                                             <div class="col-sm-10">
-                                                <input type="email" class="form-control" name="email" readonly="true"
+                                                <input type="email" class="form-control" name="email" 
                                                     value="<?php  echo $row['Email'];?>">
                                             </div>
                                         </div>
@@ -118,7 +129,7 @@ while ($row=mysqli_fetch_array($ret)) {
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Mobile
                                                 Number:</label>
                                             <div class="col-sm-10"><input type="text" class="form-control"
-                                                    name="mobilenumber" readonly="true"
+                                                    name="mobilenumber" 
                                                     value="<?php  echo $row['MobileNumber'];?>"></div>
                                         </div>
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Registration

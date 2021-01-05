@@ -42,6 +42,15 @@ if(isset($_POST['login']))
    <link href="css/style.css" rel="stylesheet">
    <link href="css/register.css" rel="stylesheet">
    <link href="css/login.css" rel="stylesheet">
+   <style >
+     .p{
+      background-image: url('../images/food_banner2.jpg');
+     }
+     body{
+
+        background-image: url('../images/food_banner2.jpg');
+     }
+   </style>
 
 </head>
 
@@ -62,16 +71,16 @@ if(isset($_POST['login']))
                   <div class="form-wrapper">
                      <div class="widget">
                         <div class="widget-body">
-                           <p style="background-image: decouvrez-l-experience-food-d-airbnb.jpg;          font-size:16px; color:red" align="center"> <?php if($msg){
-    echo $msg;
-  }  ?> </p>
+                           <p style="background-image: decouvrez-l-experience-food-d-airbnb.jpg;font-size:16px; color:red" align="center"> <?php if($msg){
+                                                  echo $msg;
+                                                }  ?> </p>
                            <form action="" name="login" method="post" class="login-form">
                               <div class="">
                                  <div class="form-bind">
                                     <i class="fas fa-user"></i>
-                                    <label>Registered Email or Contact Number</label>
+                                    <label>Email or Contact Number</label>
                                     <input type="text" name="emailcont" id="email" class="form-control"
-                                       placeholder="Registered Email or Contact Number" required="true">
+                                       placeholder="Email or Contact Number" required="true">
                                  </div>
                               </div>
                               <div class="">
@@ -80,7 +89,7 @@ if(isset($_POST['login']))
                                     <label>Password</label>
                                     <input type="password" class="form-control" id="password" value="" name="password"
                                        required="true" placeholder="Password">
-                                    <h6 style="padding-top: 20px"><a href="forgot-password.php">Forgot Password?</a>
+                                    <h6 style="padding-top: 15px;"><a style="color:white" href="forgot-password.php">Forgot Password?</a>
                                     </h6>
                                  </div>
 
@@ -104,15 +113,15 @@ if(isset($_POST['login']))
                   </div>
                   <!-- WHY? -->
                   <div class="side-wrapper">
-                     <h4>Registration is Easy</h4>
-                     <hr>
-                     <img src="images/contact_us.png" alt="" class="img-fluid" width="500" height="600">
+                     
+                     
+                     <img src="images/login-1.png" alt="" class="img-fluid" width="500" height="600">
 
 
                      <!-- end:Panel -->
-                     <h4 class="m-t-20">Contact Customer Support</h4>
-                     <p> If you"re looking for more help or have a question to ask, please </p>
-                     <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p>
+                     <!-- <h4 class="m-t-20">Contact Customer Support</h4>
+                     
+                     <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p> -->
                   </div>
                   <!-- /WHY? -->
                </div>

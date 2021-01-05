@@ -57,7 +57,11 @@ if (strlen($_SESSION['fosaid'] == 0)) {
 
     <!-- custom css -->
     <link href="css/theme.css" rel="stylesheet">
-
+<style>
+    body{
+        font-family:Lucida Sans Unicode;
+    }
+</style>
 </head>
 
 <body>

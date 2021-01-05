@@ -41,7 +41,7 @@ if(isset($_POST['submitDelItem'])){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
 
 
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">

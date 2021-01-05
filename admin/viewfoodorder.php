@@ -48,6 +48,11 @@ if(isset($_POST['submit']))
 
   <!-- custom css -->
   <link href="css/theme.css" rel="stylesheet">
+  <style>
+    body{
+      font-family:Lucida Sans Unicode;
+    }
+  </style>
 
 </head>
 
@@ -135,10 +140,10 @@ while ($row=mysqli_fetch_array($ret)) {
                         <th>Area</th>
                         <td><?php  echo $row['Area'];?></td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <th>Land Mark</th>
                         <td><?php  echo $row['Landmark'];?></td>
-                      </tr>
+                      </tr> -->
                       <tr>
                         <th>City</th>
                         <td><?php  echo $row['City'];?></td>

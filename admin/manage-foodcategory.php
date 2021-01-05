@@ -28,7 +28,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <link href="css/theme.css" rel="stylesheet">
 <style>
     body{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:Lucida Sans Unicode;
     }
         #page-wrapper{
             background-image:url(img/food.jpg);

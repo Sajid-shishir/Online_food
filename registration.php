@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
     $ret=mysqli_query($con, "select Email from tbluser where Email='$email' || MobileNumber='$contno'");
     $result=mysqli_fetch_array($ret);
     if($result>0){
-$msg="This email or Contact Number already associated with another account";
+    $msg="This email or Contact Number already associated with another account";
     }
     else{
     $query=mysqli_query($con, "insert into tbluser(FirstName, LastName, MobileNumber, Email, Password) value('$fname', '$lname','$contno', '$email', '$password' )");
@@ -80,22 +80,21 @@ $msg="This email or Contact Number already associated with another account";
 
                 <!-- why -->
                  <div class="side-wrapper">
-                     <h4 class="section-title">Registration Easy</h4>
-
+                     <h4 class="section-title">Registration</h4>
                      <hr>
                      <img src="images/contact_us.png" alt="" class="img-fluid">
 
 
                      <!-- end:Panel -->
-                     <h4 class="m-t-20"> Contact Us</h4>
-                     <p> If you"re looking for more help send your queries </p>
+                     <h4 class="m-t-20"> For any queries!!</h4>
+                     <!-- <p> If you"re looking for more help send your queries </p> -->
                      <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p>
                   </div>
                   <!-- REGISTER -->
                   <div class="form-wrapper">
                      <div class="widget">
                         <div class="widget-body">
-                           <p style="font-size:16px; color:blue" align="center"> <?php if($msg){
+                           <p style="font-size:16px; color:white" align="center"> <?php if($msg){
                                 echo $msg;
                               }  ?> </p>
                            <form action="" name="signup" method="post" onsubmit="return checkpass();">
@@ -118,7 +117,7 @@ $msg="This email or Contact Number already associated with another account";
                                  <div class="form-bind">
                                     <i class="fas fa-phone-alt"></i>
                                     <input class="form-control" type="text" value="" id="mobilenumber"
-                                       name="mobilenumber" required="true" maxlength="10" pattern="[0-9]{10}"
+                                       name="mobilenumber" required="true" maxlength="11" 
                                        placeholder="Your phone">
                                  </div>
                                  <div class="form-bind">
@@ -140,7 +139,7 @@ $msg="This email or Contact Number already associated with another account";
                                        Register</button>
                                  </div>
                                  <div class="">
-                                    <a href="login.php" class="login"><i class="ft-user"></i> Login</a>
+                                    <!-- <a href="login.php" class="login"><i class="ft-user"></i> Login</a> -->
 
                                  </div>
                               </div>

@@ -1,9 +1,10 @@
+
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <img alt="image" class="rounded-circle" src="img/user.png"/>
+                        <img alt="image" class="rounded-circle" src="img/1.png"/>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             
                             <?php
@@ -27,7 +28,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="dashboard.php" style="color:#1A2980;"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                    <a href="dashboard.php" style="color:#d45a42;"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
                                     </li>
                                     <li>
                     <a href="user-detail.php" style="color:gray;"><i class="fa fa-users"></i> <span class="nav-label">Reg Users</span> <span class="fa arrow"></span></a>
@@ -37,10 +38,10 @@
                
               
                 <li>
-                    <a href="#"  style="color:#1A2980;"><i class="fa fa-edit"></i> <span class="nav-label">Food Category</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="add-foodcategory.php">Food Category</a></li>
-                        <li><a href="manage-foodcategory.php">Manage Food Category</a></li>
+                    <a href="#"  style="color:#e76060;"><i class="fa fa-edit"></i> <span  class="nav-label">Food Category</span><span class="fa arrow"></span></a>
+                    <ul  class="nav nav-second-level collapse">
+                        <li ><a  href="add-foodcategory.php">Add Category</a></li>
+                        <li><a style="color: #e76060;" href="manage-foodcategory.php">Manage Food Category</a></li>
                     
                        
                     </ul>
@@ -57,10 +58,10 @@
                 <li>
                     <a href="#" style="color:#007bff;"><i class="fa fa-list"></i> <span class="nav-label">Orders</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                         <li><a href="notconfirmedyet.php">Not Confirmed Yet</a></li>
+                         <li><a href="notconfirmedyet.php">Order Not Confirmed</a></li>
                         <li><a href="confirmed-order.php">Order Confirmed</a></li>
-                        <li><a href="foodbeingprepared.php">Food Being Prepared</a></li>
-                        <li><a href="food-pickup.php">Food Pickup</a></li>
+                        <li><a href="foodbeingprepared.php">Food Ready</a></li>
+                        <!-- <li><a href="food-pickup.php">Food Pickup</a></li> -->
                         <li><a href="food-delivered.php">Food Delivered</a></li>
                         <li><a href="canclled-order.php">Cancelled</a></li>
                          <li><a href="all-order.php">All Orders</a></li>
@@ -73,12 +74,12 @@
                     <ul class="nav nav-second-level collapse">
                          <li><a href="bwdates-report-ds.php">B/w Dates</a></li>
                         <li><a href="requestcount-report-ds.php">Order Count</a></li>
-                        <li><a href="sales-reports.php">Sales Reports</a></li>
+                        <!-- <li><a href="sales-reports.php">Sales Reports</a></li> -->
                        
                     </ul>
                 </li>
                 <li>
-                    <a href="search.php" style="color:#007bff;"><i class="fa fa-th-large"></i> <span class="nav-label">Search</span> <span class="fa arrow"></span></a>
+                    <a href="search.php" style="color:black;"><i class="fa fa-th-large"></i> <span class="nav-label">Search</span> <span class="fa arrow"></span></a>
                                     </li>
                                     <li>
                

@@ -17,7 +17,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
 
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
@@ -51,7 +51,7 @@ if (strlen($_SESSION['fosaid']==0)) {
 
                             <div class="ibox-content">
                                 <table class="table table-bordered mg-b-0">
-                                    <p style="text-align: center; color: blue; font-size: 25px">Detail of Order Pickup
+                                    <p style="text-align: center; color: blue; font-size: 25px">Order Pickup's
                                     </p>
                                     <thead>
                                         <tr>

@@ -17,7 +17,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Ordering System</title>
+    <title>Catch Food Online</title>
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -28,7 +28,7 @@ if (strlen($_SESSION['fosaid']==0)) {
     <link href="css/theme.css" rel="stylesheet">
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Lucida Sans Unicode;
         }
         #page-wrapper{
             background-image:url(img/food.jpg);
@@ -74,7 +74,7 @@ if (strlen($_SESSION['fosaid']==0)) {
 
                             <div class="ibox-content">
                                 <table class="table table-bordered mg-b-0">
-                                    <p style="text-align: center; color: blue;font-size: 30px">Manage Food Items </p>
+                                    <p style="text-align: center; color: blue;font-size: 30px">Manage Foods</p>
                                     <thead>
                                         <tr>
                                             <th>S.NO</th>
