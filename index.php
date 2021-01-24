@@ -62,18 +62,18 @@ if($query)
         <div class="container">
             <div class="banner-wrapper">
                 <div class="banner-left">
-                    <h2 style="color: red"> Order Online & Get fast Delivery</h2>
-                    <p>Find your favourite food!</p>
+                    <h2 style="color: red"> Search your Food </h2>
+                    <!-- <p>Find your favourite food!</p> -->
                     <div class="banner-form">
                         <form method="post" name="search" action="search-food.php">
 
                             <div class="form-group">
                                 <input type="text" class="form-control" id="exampleInputAmount" name="searchdata"
-                                    id="searchdata" placeholder="Search your food here..">
+                                    id="searchdata" placeholder="Search here">
                             </div>
 
                             <button onclick="location.href='search-food.php'" type="submit" name="search"
-                                class="btn  btn-lg">Search food</button>
+                                class="btn  btn-lg">Search </button>
                         </form>
                     </div>
                 </div>
@@ -82,41 +82,30 @@ if($query)
     </section>
     <!-- banner part ends -->
 
-    <!-- location match part starts -->
-    <!-- <div class="location-match">
-        <div class="container"> <span>Popular Delicious Foods Here: <span class="primary-color">All over Dhaka<span>
-                        <i class="fas fa-map-marker-alt"></i>
-                    </span>
-        </div>
-    </div> -->
-    <!-- location match part ends -->
+
 
     <!-- Popular block starts -->
     <section class="popular">
         <div class="container">
-
             <div class="section-head">
-                <h2 style="color: gray"  class="section-title"> Our Popular Foods </h2>
-                
+                <h2 style="color: gray"  class="section-title"> Our Popular Foods </h2>               
             </div>
-
-
             <div class="items-wrapper">
                 <!-- Each popular food item starts -->
                 <?php                   
-                $ret=mysqli_query($con,"select * from tblfood order by rand() limit 5");
+                $ret=mysqli_query($con,"select * from tblfood order by rand() limit 4");
                 $cnt=1;
                 while ($row=mysqli_fetch_array($ret)) {
                 ?>
                 <div class="food-item">
                     <div class="food-item-wrap">
-                        <div class="food-img"><img src="admin/itemimages/<?php echo $row['Image'];?>" width="400"
-                                height="180">
-                            <span class="price">Taka <?php echo $row['ItemPrice'];?></span>
+                        <div class="food-img"><img src="admin/itemimages/<?php echo $row['Image'];?>" width="600"
+                                height="10">
+                            <span class="price">Tk <?php echo $row['ItemPrice'];?></span>
                         </div>
                         <div class="content">
                             <h5><a
-                                    href="food-detail.php?fid=<?php echo $row['ID'];?>"><?php echo $row['ItemName'];?></a>
+                                href="food-detail.php?fid=<?php echo $row['ID'];?>"><?php echo $row['ItemName'];?></a>
                             </h5>
                             <div class="product-name"><?php echo substr($row['ItemDes'],0,100);?></div>
                             <div class="price-btn-block">
@@ -134,21 +123,11 @@ if($query)
 
                     </div>
                 </div>
-                <?php } ?>
-                <!-- Each popular food item starts -->
-                <!-- Each popular food item starts -->
-
-            </div>
+                <?php } ?>   
+           </div>
         </div>
     </section>
-    <!-- Popular block ends -->
-
-    <!-- How it works block starts -->
-    
-    <!-- How it works block ends -->
-    <!-- Featured restaurants starts -->
-
-    <!-- Featured restaurants ends -->
+   
 
     <!-- start: FOOTER -->
     <?php include_once('includes/footer.php');?>

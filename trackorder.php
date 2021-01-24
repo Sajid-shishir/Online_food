@@ -27,12 +27,11 @@ window.print();
 $orderid=intval($_GET['oid']);
 $ret=mysqli_query($con,"select tblfoodtracking.OrderCanclledByUser,tblfoodtracking.remark,tblfoodtracking.status as fstatus,tblfoodtracking.StatusDate from tblfoodtracking where tblfoodtracking.OrderId ='$orderid'");
 $cnt=1;
+?>
 
-
- ?>
 <table border="1"  cellpadding="10" style="border-collapse: collapse; border-spacing:0; width: 100%; text-align: center;">
   <tr align="center">
-   <th colspan="4" >Catch Food Online Invoice #<?php echo  $orderid;?></th> 
+   <th colspan="4" >Catch Food Online History #<?php echo  $orderid;?></th> 
   </tr>
   <tr>
     <th>#</th>
@@ -51,11 +50,10 @@ while ($row=mysqli_fetch_array($ret)) {
 if($cancelledby==1){
 echo "("."by user".")";
 } else {
-
 echo "("."by Resturants".")";
 }
-
-  ?></td> 
+?>
+</td> 
    <td><?php  echo $row['StatusDate'];?></td> 
 </tr>
 <?php $cnt=$cnt+1;} ?>

@@ -86,15 +86,15 @@ if(isset($_POST['login']))
                      </div>
                      <!-- WHY? -->
                     <div class="side-wrapper">
-                        <h4 class="section-title">Track your order by using order number.</h4>
+                        <h4 class="section-title">Track using order number.</h4>
                         <hr>
                         <img src="images/track-order2.png" alt="" class="img-fluid">
                         <p></p>
                    
                    
                         <!-- end:Panel -->
-                        <h4 class="m-t-20">For Customer Support</h4>
-                        <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p>
+                        <h4 class="">For Customer Support</h4>
+                        <p> <a href="contact.php" class="custom-btn; color= white " >contact us</a> </p>
                      </div>
                      <!-- /WHY? -->
                   </div>

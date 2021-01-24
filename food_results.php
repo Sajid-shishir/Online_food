@@ -64,39 +64,26 @@ if($query)
                                     </div>
                                 </div>
                             </form>
-
-
-
-                            <div class="main-block">
+                          <div class="main-block">
                                 <div class="sidebar-title">
                                     <h6>Food Categories</h6> <i class="fas fa-utensils"></i>
                                 </div>
-                                <?php
-      
-      $query=mysqli_query($con,"select * from  tblcategory");
-              while($row=mysqli_fetch_array($query))
-              {
-              ?>
-
-
-
+                                <?php     
+                                $query=mysqli_query($con,"select * from  tblcategory");
+                                while($row=mysqli_fetch_array($query))
+                                {
+                                ?>
                                 <ul class="categories">
-
                                     <li>
                                         <label class="custom-control custom-checkbox">
                                             <span class="custom-control-description"><a
                                                     href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span>
                                         </label>
                                     </li>
-
-
                                 </ul>
                                 <?php } ?>
-
                             </div>
-
                         </div>
-
                         <!-- end:Pricing widget -->
 
                         <!-- end:Widget -->
@@ -105,16 +92,15 @@ if($query)
                         <div class="items-wrapper">
                             <!-- Each popular food item starts -->
                             <?php
-
-  if (isset($_GET['pageno'])) {
+        if (isset($_GET['pageno'])) {
             $pageno = $_GET['pageno'];
         } else {
             $pageno = 1;
         }
 
 // Formula for pagination
-$no_of_records_per_page = 9;
-$offset = ($pageno-1) * $no_of_records_per_page;
+            $no_of_records_per_page = 4;
+            $offset = ($pageno-1) * $no_of_records_per_page;
 
 // Getting total number of pages
         $total_pages_sql ="SELECT COUNT(*) FROM tblfood";
@@ -125,23 +111,19 @@ $offset = ($pageno-1) * $no_of_records_per_page;
         $res_data = mysqli_query($con,$sql);
         $cnt=1;
         while($row = mysqli_fetch_array($res_data)){
-
-
-
-
-?>
+        ?>
 
                             <div class="food-item">
                                 <div class="food-item-wrap">
                                     <div class="food-img"> <img src="admin/itemimages/<?php echo $row['Image'];?>"
                                             width="300" height="180">
-                                        <span class="price">Taka <?php echo $row['ItemPrice'];?></span>
+                                        <span class="price">Taka: <?php echo $row['ItemPrice'];?></span>
                                     </div>
                                     <div class="content">
                                         <h5><a
                                                 href="food-detail.php?fid=<?php echo $row['ID'];?>"><?php echo $row['ItemName'];?></a>
                                         </h5>
-                                        <div class="product-name"><?php echo substr($row['ItemDes'],0,70);?></div>
+                                        <div class="product-name"> fo<?php echo substr($row['ItemDes'],0,70);?></div>
                                         <div class="price-btn-block">
 
                                             <?php if($_SESSION['fosuid']==""){?>

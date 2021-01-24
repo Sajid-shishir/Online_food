@@ -19,9 +19,9 @@
          <?php } ?>
 
          <?php if (strlen($_SESSION['fosuid']>0)) {?>
-         <li><a class="menu-link" href="my-order.php"><strong> My Orders</strong>
+         <li><a class="menu-link" href="my-order.php"> My Orders
             </a> </li>
-         <li><a class="menu-link" href="cart.php"><strong> Cart</strong> </a>
+         <li><a class="menu-link" href="cart.php"> Cart </a>
          </li>
          <?php } ?>
       </ul>

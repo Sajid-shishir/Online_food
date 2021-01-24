@@ -52,33 +52,7 @@ if (strlen($_SESSION['fosuid']==0)) {
 
             <div class="container">
                 <div class="order-row">
-                    <div class="menu">
-                        <div class="sidebar">
-                            <div class="main-block">
-                                <div class="sidebar-title">
-                                    <h6>Food Categories</h6> <i class="fa fa-cutlery pull-right"></i>
-                                </div>
-                                <ul id="food-menu">
-                                    <?php     
-                                    $query=mysqli_query($con,"select * from  tblcategory");
-                                    while($row=mysqli_fetch_array($query))
-                                    {
-                                    ?>
-                                    <li>
-                                        <label class="custom-control custom-checkbox">
-                                            <span class="custom-control-description"><a
-                                                    href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span>
-                                        </label>
-                                    </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                            <!-- end:Sidebar nav -->
-
-                        </div>
-                        <!-- end:Left Sidebar -->
-
-                    </div>
+                    
                     <div class="mid-menu">
                         <div class="menu-widget">
                             <div class="widget-heading">

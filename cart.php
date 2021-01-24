@@ -93,36 +93,7 @@ if (strlen($_SESSION['fosuid'] == 0)) {
 
             <div class="container">
                 <div class="order-row">
-                    <div class="menu">
-                        <div class="sidebar">
-                            <div class="main-block">
-                                <div class="sidebar-title">
-                                    <h6>Food Categories</h6> <i class="fa fa-cutlery pull-right"></i>
-                                </div>
-                                <ul id="food-menu">
-                                    <?php
-                                    $query = mysqli_query($con, "select * from  tblcategory");
-                                    while ($row = mysqli_fetch_array($query)) {
-                                    ?>
-                                 <li>
-                                        <label class="custom-control custom-checkbox">
-                                            <span class="custom-control-description"><a
-                                                    href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName']; ?>"><?php echo $row['CategoryName']; ?></a></span>
-                                        </label>
-                                    </li>
-
-
-
-                                    <?php }?>
-                                </ul>
-
-                            </div>
-                            <!-- end:Sidebar nav -->
-
-                        </div>
-                        <!-- end:Left Sidebar -->
-
-                    </div>
+                    
                     <div class="mid-menu">
                         <div class="menu-widget">
                             <div class="widget-heading">
@@ -137,12 +108,11 @@ if (strlen($_SESSION['fosuid'] == 0)) {
                             <div class="order-collapse" id="1">
 
                                 <?php
-$userid = $_SESSION['fosuid'];
+    $userid = $_SESSION['fosuid'];
     $query = mysqli_query($con, "select tblorders.ID as frid, tblorders.Quantity as pQty,tblfood.Image,tblfood.ItemName,tblfood.ItemDes,tblfood.ItemPrice,tblfood.ItemQty,tblorders.FoodId from tblorders join tblfood on tblfood.ID=tblorders.FoodId where tblorders.UserId='$userid' and tblorders.IsOrderPlaced is null");
     $num = mysqli_num_rows($query);
     if ($num > 0) {
         while ($row = mysqli_fetch_array($query)) {
-
             ?>
 
                                 <div class="order-items">
@@ -162,7 +132,7 @@ $userid = $_SESSION['fosuid'];
                                         <!-- end:Description -->
                                     </div>
                                     <!-- end:col -->
-                                    <div class="qty">
+                                    <div class="qty" >
                                         <button onclick="changeUnitQty(event, 's', <?php echo $row['FoodId'] ?>, <?php echo $total = $row['ItemPrice'] ?>)">&nbsp;&nbsp;-&nbsp;&nbsp;</button>
                                         <input type="text" oninput="changeUnitQty(event, 't', <?php echo $row['FoodId'] ?>, <?php echo $total = $row['ItemPrice'] ?>)" value="<?php echo $row['pQty'] ?>">
                                         <button onclick="changeUnitQty(event, 'a', <?php echo $row['FoodId'] ?>, <?php echo $total = $row['ItemPrice'] ?>)">&nbsp;+&nbsp;</button>

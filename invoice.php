@@ -53,7 +53,7 @@ $grandtotal+=$total;
 $cnt=$cnt+1;} ?>
 <tr>
   <th colspan="3" style="text-align:center">Grand Total </th>
-<td><?php  echo $grandtotal;?></td>
+<td> TK:<?php  echo  $grandtotal;?></td>
 </tr>
 </table>
      

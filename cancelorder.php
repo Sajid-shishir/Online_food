@@ -83,7 +83,7 @@ echo $status;
 </form>
     <?php } else { ?>
 <?php if($status=='Order Cancelled'){?>
-<p style="color:red; font-size:20px;"> Order Alreday Cancelled</p>
+<p style="color:red; font-size:20px;"> Order Already Cancelled</p>
 <?php } else { ?>
   <p style="color:red; font-size:20px;"> You can't cancel this order. Order pickup for delivery or delivered</p>
 

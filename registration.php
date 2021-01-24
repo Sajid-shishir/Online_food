@@ -86,9 +86,9 @@ if(isset($_POST['submit']))
 
 
                      <!-- end:Panel -->
-                     <h4 class="m-t-20"> For any queries!!</h4>
-                     <!-- <p> If you"re looking for more help send your queries </p> -->
-                     <p> <a href="contact.php" class="custom-btn" style="color:white; display:inline-block">contact us</a> </p>
+                     <h4 class=""> For queries</h4>
+                     
+                     <p> <a href="contact.php" class="custom-btn ;color= white" >contact us</a> </p>
                   </div>
                   <!-- REGISTER -->
                   <div class="form-wrapper">
@@ -135,7 +135,7 @@ if(isset($_POST['submit']))
                               <div class="form-bottom">
                                  <div class="">
                                     <a href="login.php"></a>
-                                    <button type="submit" name="submit" class="custom-btn"><i class="ft-user"></i>
+                                    <button type="submit" name="submit" class="btn btn-info"><i class="ft-user"></i>
                                        Register</button>
                                  </div>
                                  <div class="">

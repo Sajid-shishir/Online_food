@@ -275,7 +275,7 @@ $cnt=$cnt+1;} ?>
                         <select name="status" class="form-control wd-450" required="true">
                           <option value="Order Confirmed" selected="true">Order Confirmed</option>
                           <option value="Order Cancelled">Order Cancelled</option>
-                          <option value="Food being Prepared">Food being Prepared</option>
+                          <option value="Food being Prepared">Food Prepared</option>
                           <option value="Food Pickup">Food Pickup</option>
                           <option value="Food Delivered">Food Delivered</option>
                         </select></td>
@@ -303,7 +303,7 @@ $cnt=1;
                 <table id="datatable" class="table table-bordered dt-responsive nowrap"
                   style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                   <tr align="center">
-                    <th colspan="4">Food Tracking History</th>
+                    <th colspan="4">Tracking History</th>
                   </tr>
                   <tr>
                     <th>#</th>
@@ -313,6 +313,7 @@ $cnt=1;
                   </tr>
                   <?php  
 while ($row=mysqli_fetch_array($ret)) { 
+  $cancelledby=$row['OrderCanclledByUser'];
   ?>
                   <tr>
                     <td><?php echo $cnt;?></td>
@@ -322,7 +323,7 @@ if($cancelledby==1){
 echo "("."by user".")";
 } else {
 
-echo "("."by Resturants".")";
+echo "("."by Restaurants".")";
 }
 
   ?></td>

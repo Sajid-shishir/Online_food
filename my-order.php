@@ -52,37 +52,7 @@ if (strlen($_SESSION['fosuid']==0)) {
             <section class="restaurants-page">
                 <div class="container">
                     <div class="order-row">
-                        <div class="menu">
-                            <div class="sidebar">
-                                <div class="main-block">
-                                    <div class="sidebar-title white-txt">
-                                        <h6>Food Category</h6> <i class="fa fa-cutlery pull-right"></i>
-                                    </div>
-                                    <ul id="food-menu">
-                                        <?php
-                                        $query=mysqli_query($con,"select * from  tblcategory");
-                                        while($row=mysqli_fetch_array($query))
-                                        {
-                                        ?>
-                                        <li>
-                                            <label class="custom-control custom-checkbox">
-                                                <span class="custom-control-description"><a
-                                                        href="viewfood-categorywise.php?catid=<?php echo $row['CategoryName'];?>"><?php echo $row['CategoryName'];?></a></span>
-                                            </label>
-                                        </li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                                <!-- end:Sidebar nav -->
-                                <div class="widget-delivery">
-
-                                </div>
-                            </div>
-
-                            <!-- end:Pricing widget -->
-
-                            <!-- end:Widget -->
-                        </div>
+                        
                         <div class="order-detail">
                             <div class="restaurant-entry">
 
