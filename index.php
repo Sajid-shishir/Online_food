@@ -88,7 +88,7 @@ if($query)
     <section class="popular">
         <div class="container">
             <div class="section-head">
-                <h2 style="color: gray"  class="section-title"> Our Popular Foods you can see here </h2>               
+                <h2 style="color: gray"  class="section-title"> Our Popular Foods</h2>               
             </div>
             <div class="items-wrapper">
                 <!-- Each popular food item starts -->

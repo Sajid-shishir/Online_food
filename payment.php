@@ -143,7 +143,7 @@ if (strlen($_SESSION['fosuid']==0)) {
 
     <h2>Select Method</h2>
     <input type="radio" onchange="if(this.checked) {$('#bkash').hide();$('#cod').show();}" name="pmathod" value="cod">
-    Cash On Delivery
+    Cash On Delivery method here
     <br>
     <input type="radio" onchange="if(this.checked) {$('#bkash').show();$('#cod').hide();}" checked="checked"
         name="pmathod" value="bkash">
